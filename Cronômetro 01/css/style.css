@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Normal */
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    color: #677ba1;
+    align-items: center;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #e2f3f5;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ID */
+
+#cabeca {
+    display: flex;
+    font-size: 24px;
+    margin: 10px 0px;
+    align-items: center;
+    flex-direction: column;
+}
+
+#display {
+    display: flex;
+    font-size: 90px;
+    margin: 10px 0px;
+    align-items: center;
+    flex-direction: column;
+}
+
+#start {
+    background-color: #3DC0F1;
+}
+
+#stop {
+    background-color: rgb(184, 226, 241);
+}
+
+#reset {
+    background-color: rgb(201, 201, 201);
+}
+
+/* Classe */
+
+.button {
+    width: 10em;
+    margin: 1em;
+    border: none;
+    height: 2.8em;
+    font-size: 1em;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    overflow: hidden;
+    position: relative;
+    border-radius: 1.5em;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    background-color: #677ba1;
+}
+
+.button:before {
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.button:hover:before {
+    opacity: 1;
+    animation: expand .3s ease forwards;
+}
+
+/* Special */
+
+@keyframes expand {
+    0% {
+      display: none;
+      width: 10px;
+      height: 10px;
+    }
+
+    100% {
+      display: block;
+      width: 200px;
+      height: 200px;
+    }
+}
